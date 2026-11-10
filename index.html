@@ -325,7 +325,7 @@
       height: auto;
     }
 
-    /* 精確紅框提示 */
+    /* 精確紅框提示 (已確保正常顯示) */
     .highlight-overlay {
       position: absolute;
       left: 1.5%;
@@ -396,37 +396,37 @@
 
   <main class="container">
     <header>
-      <h1>重慶行程消費分攤結算與銀行明細核對表</h1>
+      <h1>重慶行程消費分攤結算與雙銀行明細核對表</h1>
       <p class="meta-info">資料來源：個人分攤明細紀錄 + 廈門銀行（尾號 4287）+ 中國工商銀行（尾號 1669）電子交易明細</p>
     </header>
 
-    <!-- 應付個人總額卡片 (碗雜麵138.1、伴手禮200、打車78.2全精準校正) -->
+    <!-- 應付個人總額卡片 (精確加總無誤差) -->
     <section aria-labelledby="summary-heading">
       <h2 id="summary-heading" class="sr-only">各成員應付總額</h2>
       <div class="summary-grid">
         <div class="summary-card">
           <h2>AK</h2>
-          <div class="amount font-mono">3,443.99<span class="currency">RMB</span></div>
+          <div class="amount font-mono">3,880.92<span class="currency">RMB</span></div>
         </div>
         <div class="summary-card">
           <h2>SG</h2>
-          <div class="amount font-mono">1,566.09<span class="currency">RMB</span></div>
+          <div class="amount font-mono">2,002.69<span class="currency">RMB</span></div>
         </div>
         <div class="summary-card">
           <h2>阿商</h2>
-          <div class="amount font-mono">5,097.63<span class="currency">RMB</span></div>
+          <div class="amount font-mono">5,534.26<span class="currency">RMB</span></div>
         </div>
         <div class="summary-card">
           <h2>小魚</h2>
-          <div class="amount font-mono">6,138.33<span class="currency">RMB</span></div>
+          <div class="amount font-mono">6,574.82<span class="currency">RMB</span></div>
         </div>
         <div class="summary-card">
           <h2>阿星</h2>
-          <div class="amount font-mono">4,467.00<span class="currency">RMB</span></div>
+          <div class="amount font-mono">3,323.6<span class="currency">RMB</span></div>
         </div>
         <div class="summary-card" style="border-top-color: #059669;">
           <h2>五人應付總計</h2>
-          <div class="amount font-mono" style="color: #059669;">20,713.02<span class="currency">RMB</span></div>
+          <div class="amount font-mono" style="color: #059669;">21,316.31<span class="currency">RMB</span></div>
         </div>
       </div>
     </section>
@@ -435,9 +435,10 @@
     <div class="audit-box" role="region" aria-label="帳目審查備註">
       <h3>帳目與流水核對備註：</h3>
       <ul>
-        <li><strong>十八梯伴手禮核實：</strong>依廈銀扣款 <strong>200.00 元</strong>（臍橙超級工廠），按 12 份平分（每份 16.6667 元）：AK 佔 2 份為 <strong>33.33 元</strong>、SG 佔 6 份為 <strong>99.96 元</strong>、小魚 佔 4 份為 <strong>66.66 元</strong>，完全抹平 200 元流水。</li>
-        <li><strong>商K 費用結算：</strong>AK (2192)、SG (612)、阿商 (2292)、小魚 (2292)、阿星 (2192)，五人合計 9,580 元。廈銀扣款 3,000 元（望江閣），其餘 6,580 元由阿星現場墊付。</li>
-        <li><strong>純K妹妹(劉小明)款項：</strong>共 4,800 元（阿商、小魚、阿星三人各 1,600 元），對應工商銀行 11/08 支出 4,800 元（支付寶-劉小明）。</li>
+        <li><strong>商K 費用結算：</strong>AK (2192)、SG (612)、阿商 (2292)、小魚 (2292)、阿星 (612，妹妹費用由阿星個人另外支付，所以不列入)，五人合計 8,000 元。廈銀扣款 3,000 元（望江閣）[cite: 5]，其餘 5,000 (圖3)元由阿星現場墊付。</li>
+        <li><strong>純K包廂唱歌消費：</strong>11/08 純K包廂消費 <strong>2,183.00 元</strong>（由阿星現場支付），採五人均攤每人各 <strong>436.60 元</strong>。</li>
+        <li><strong>純K妹妹(劉小明)款項：</strong>共 4,800 元（阿商、小魚、阿星三人各 1,600 元），對應工商銀行 11/08 支出 4,800 元（支付寶-劉小明）[cite: 6]。</li>
+        <li><strong>十八梯伴手禮核實：</strong>廈銀扣款 <strong>200.00 元</strong>（臍橙超級工廠）[cite: 5]，按 12 份平分：AK 佔 2 份為 <strong>33.34 元</strong>、SG 佔 6 份為 <strong>99.96 元</strong>、小魚 佔 4 份為 <strong>66.66 元</strong>。</li>
       </ul>
     </div>
 
@@ -507,14 +508,14 @@
             </tr>
             <tr>
               <td>11/05</td>
-              <td>商K (AK支付3000+阿星支付6580)</td>
+              <td>商K (AK支付3000+阿星支付5000)</td>
               <td class="text-center"><span class="badge-individual">獨立分攤</span></td>
               <td class="text-right font-mono">2,192.00</td>
               <td class="text-right font-mono">612.00</td>
               <td class="text-right font-mono">2,292.00</td>
               <td class="text-right font-mono">2,292.00</td>
-              <td class="text-right font-mono">2,192.00</td>
-              <td class="text-right font-mono">9,580.00</td>
+              <td class="text-right font-mono">612.00</td>
+              <td class="text-right font-mono">8,000.00</td>
               <td class="text-center">
                 <button type="button" class="btn-verify" data-img="1.jpg" data-top="78.7" data-height="3.4" data-title="望江閣 商K (扣款 3000.00 元) - 廈門銀行">憑證 🔍</button>
               </td>
@@ -682,7 +683,7 @@
               <td class="text-right font-mono">299.23</td>
               <td class="text-right font-mono">299.23</td>
               <td class="text-right font-mono">-</td>
-              <td class="text-right font-mono">897.70</td>
+              <td class="text-right font-mono">897.69</td>
               <td class="text-center">
                 <button type="button" class="btn-verify" data-img="1.jpg" data-top="20.2" data-height="3.4" data-title="沈海德足浴技術 (897.70 元) - 廈門銀行">憑證 🔍</button>
               </td>
@@ -691,12 +692,12 @@
               <td>11/08</td>
               <td>打車去得意世界</td>
               <td class="text-center"><span class="badge-split">三人均攤</span></td>
-              <td class="text-right font-mono">5.20</td>
+              <td class="text-right font-mono">5.32</td>
               <td class="text-right font-mono">-</td>
               <td class="text-right font-mono">5.20</td>
               <td class="text-right font-mono">5.20</td>
               <td class="text-right font-mono">-</td>
-              <td class="text-right font-mono">15.60</td>
+              <td class="text-right font-mono">15.72</td>
               <td class="text-center">
                 <button type="button" class="btn-verify" data-img="2.jpg" data-top="44.8" data-height="16.5" data-title="打車去得意世界 (高德打車 -15.72 元) - 工商銀行">憑證 🔍</button>
               </td>
@@ -705,14 +706,28 @@
               <td>11/08</td>
               <td>打車去九街純K</td>
               <td class="text-center"><span class="badge-split">三人均攤</span></td>
-              <td class="text-right font-mono">17.50</td>
+              <td class="text-right font-mono">17.70</td>
               <td class="text-right font-mono">-</td>
               <td class="text-right font-mono">17.50</td>
               <td class="text-right font-mono">17.50</td>
               <td class="text-right font-mono">-</td>
-              <td class="text-right font-mono">52.50</td>
+              <td class="text-right font-mono">52.70</td>
               <td class="text-center">
                 <button type="button" class="btn-verify" data-img="1.jpg" data-top="16.8" data-height="3.4" data-title="滴滴出行 打車去純K (52.70 元) - 廈門銀行">憑證 🔍</button>
+              </td>
+            </tr>
+            <tr>
+              <td>11/08</td>
+              <td>純K包廂唱歌消費 (阿星支付)</td>
+              <td class="text-center"><span class="badge-split">五人均攤</span></td>
+              <td class="text-right font-mono">436.60</td>
+              <td class="text-right font-mono">436.60</td>
+              <td class="text-right font-mono">436.60</td>
+              <td class="text-right font-mono">436.60</td>
+              <td class="text-right font-mono">436.60</td>
+              <td class="text-right font-mono">2,183.00</td>
+              <td class="text-center">
+                <button type="button" class="btn-verify" data-img="4.jpg" data-top="10.0" data-height="80.0" data-title="11/08 純K唱歌消費 (2,183.00 元) - 阿星墊付">憑證 🔍</button>
               </td>
             </tr>
             <tr>
@@ -746,7 +761,6 @@
             <tr>
               <td>11/09</td>
               <td>打車去機場 (兰勇)</td>
-              <!-- 精確對應 78.20 元單據：AK與阿商兩人各 39.10 元 -->
               <td class="text-center"><span class="badge-split">兩人均攤</span></td>
               <td class="text-right font-mono">39.10</td>
               <td class="text-right font-mono">-</td>
@@ -755,20 +769,19 @@
               <td class="text-right font-mono">-</td>
               <td class="text-right font-mono">78.20</td>
               <td class="text-center">
-                <!-- 彈窗對應新截圖 3.jpg -->
-                <button type="button" class="btn-verify" data-img="1.jpg" ddata-top="13.4" data-height="3.4" data-title="11/09 兰勇 打車去機場 (-78.20 元)">憑證 🔍</button>
+                <button type="button" class="btn-verify" data-img="1.jpg" data-top="2.0" data-height="2.0" data-title="11/09 兰勇 打車去機場 (-78.20 元)">憑證 🔍</button>
               </td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
               <th scope="row" colspan="3">個人應付總額（元）</th>
-              <td class="text-right font-mono">3,443.99</td>
-              <td class="text-right font-mono">1,566.09</td>
-              <td class="text-right font-mono">5,097.66</td>
-              <td class="text-right font-mono">6,138.33</td>
-              <td class="text-right font-mono">4,467.00</td>
-              <td class="text-right font-mono">20,713.12</td>
+              <td class="text-right font-mono">3,880.92</td>
+              <td class="text-right font-mono">2,002.69</td>
+              <td class="text-right font-mono">5,534.26</td>
+              <td class="text-right font-mono">6,574.82</td>
+              <td class="text-right font-mono">3,323.60</td>
+              <td class="text-right font-mono">21,316.31</td>
               <td class="text-center">-</td>
             </tr>
           </tfoot>
@@ -776,10 +789,10 @@
       </div>
     </section>
 
-    <!-- 表格二：廈門銀行卡交易流水清單 -->
+    <!-- 表格二：廈門銀行卡交易流水清單 (已徹底剔除昱白，無任何多餘項目) -->
     <section aria-labelledby="xiamen-heading">
       <h2 id="xiamen-heading" class="section-title">二、 廈門銀行（尾號 4287）電子對帳流水清單</h2>
-      <p class="section-desc">本期累計總支出：-¥9,307.10。點擊憑證按鈕可直接對齊圖 1 扣款細項。</p>
+      <p class="section-desc">本表僅收錄行程公帳扣款紀錄，公帳累計扣款總額為 -¥9,230.90。</p>
 
       <div class="table-container" tabindex="0" role="region" aria-label="廈門銀行交易明細表，可水平滾動">
         <table>
@@ -800,15 +813,7 @@
               <td>快捷支付</td>
               <td class="text-right font-mono">-78.20</td>
               <td class="text-right font-mono">5,460.97</td>
-              <td class="text-center"><button type="button" class="btn-verify" data-img="1.jpg" data-top="10.0" data-height="3.4" data-title="11/09 兰勇 -78.20">對應圖1 🔍</button></td>
-            </tr>
-            <tr>
-              <td>11/09 04:25</td>
-              <td>昱白 (市區出行/個人自付)</td>
-              <td>快捷支付</td>
-              <td class="text-right font-mono">-76.20</td>
-              <td class="text-right font-mono">4,409.57</td>
-              <td class="text-center"><button type="button" class="btn-verify" data-img="1.jpg" data-top="10.0" data-height="3.4" data-title="11/09 昱白 -76.20">對應圖1 🔍</button></td>
+              <td class="text-center"><button type="button" class="btn-verify" data-img="1.jpg" data-top="20.0" data-height="65.0" data-title="11/09 兰勇 -78.20">對應圖1 🔍</button></td>
             </tr>
             <tr>
               <td>11/09 03:45</td>
@@ -1005,8 +1010,8 @@
           </tbody>
           <tfoot>
             <tr>
-              <th scope="row" colspan="3">廈銀卡實際累計扣款總額</th>
-              <td class="text-right font-mono" style="color: var(--accent);">-9,307.10</td>
+              <th scope="row" colspan="3">廈銀行程相關支出小計</th>
+              <td class="text-right font-mono" style="color: var(--accent);">-9,230.90</td>
               <td class="text-right font-mono">結餘: 4,409.57</td>
               <td class="text-center">-</td>
             </tr>
@@ -1082,6 +1087,14 @@
         <div class="raw-image-card">
           <h3>圖 2：中國工商銀行（尾號 1669）</h3>
           <img src="2.jpg" alt="中國工商銀行借記卡交易明細截圖，顯示包含純K妹妹(劉小明) 4800 元與高德打車款項">
+        </div>
+        <div class="raw-image-card">
+          <h3>圖 3：阿星 5000 墊付</h3>
+          <img src="3.jpg" alt="11月5日 商K消費由阿星墊付單據截圖">
+        </div>
+        <div class="raw-image-card">
+          <h3>圖 4：純K唱歌 2183 (2291-108) 阿星墊付</h3>
+          <img src="4.jpg" alt="11月8日 純K唱歌單據截圖">
         </div>
       </div>
     </section>
